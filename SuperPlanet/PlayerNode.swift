@@ -10,9 +10,9 @@ import SpriteKit
 class PlayerNode: SKNode {
     private let playerSprite: SKSpriteNode
 
-    init(texture: SKTexture?) {
+    init(imageNamed: String) {
         // Initialize the sprite node
-        playerSprite = SKSpriteNode(texture: texture)
+        playerSprite = SKSpriteNode(imageNamed: imageNamed)
         super.init()
         
         // Set up the sprite node
@@ -33,14 +33,16 @@ class PlayerNode: SKNode {
     
     // Custom method to handle jumping
     func jump() {
-        if playerSprite.physicsBody?.velocity.dy == 0 {
-            playerSprite.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 200)) // Adjust impulse as needed
-        }
+        //if playerSprite.physicsBody?.velocity.dy == 0 {
+        playerSprite.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50)) // Adjust impulse as needed
+        //}
     }
 
     // Custom method to move the player
     func move(by offset: CGPoint) {
-//        position += offset
-//        playerSprite.position -= offset
+        position.x += offset.x
+        position.y += offset.y
+        playerSprite.position.x -= offset.x
+        playerSprite.position.y -= offset.y
     }
 }

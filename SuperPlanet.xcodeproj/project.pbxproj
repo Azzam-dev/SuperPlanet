@@ -12,6 +12,16 @@
 		EC58C1C62C5443A700C5DE14 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58C1C52C5443A700C5DE14 /* PlayerNode.swift */; };
 		EC58C2082C54462C00C5DE14 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC58C2062C54462C00C5DE14 /* GameScene.sks */; };
 		EC58C2092C54462C00C5DE14 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC58C2072C54462C00C5DE14 /* Actions.sks */; };
+		EC58C20B2C54520800C5DE14 /* Space.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC58C20A2C54520800C5DE14 /* Space.sks */; };
+		EC58C20D2C5460C700C5DE14 /* GroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58C20C2C5460C700C5DE14 /* GroundNode.swift */; };
+		EC58C20F2C5467DF00C5DE14 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58C20E2C5467DF00C5DE14 /* MainMenu.swift */; };
+		EC58C2112C54692C00C5DE14 /* Fireflies.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC58C2102C54692C00C5DE14 /* Fireflies.sks */; };
+		EC58C2132C54696D00C5DE14 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC58C2122C54696D00C5DE14 /* Fire.sks */; };
+		EC58C2152C54698A00C5DE14 /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC58C2142C54698A00C5DE14 /* Rain.sks */; };
+		EC58C2172C5469B400C5DE14 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC58C2162C5469B400C5DE14 /* Magic.sks */; };
+		EC58C2192C546D0600C5DE14 /* ObstacleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58C2182C546D0600C5DE14 /* ObstacleNode.swift */; };
+		EC58C21B2C546DAE00C5DE14 /* EnemyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58C21A2C546DAE00C5DE14 /* EnemyNode.swift */; };
+		EC58C21D2C546DEE00C5DE14 /* CollectibleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58C21C2C546DEE00C5DE14 /* CollectibleNode.swift */; };
 		ECB5DAFF2C53F0870065D322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DAFE2C53F0870065D322 /* AppDelegate.swift */; };
 		ECB5DB012C53F0870065D322 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB002C53F0870065D322 /* SceneDelegate.swift */; };
 		ECB5DB032C53F0870065D322 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB022C53F0870065D322 /* MenuViewController.swift */; };
@@ -50,6 +60,16 @@
 		EC58C1C52C5443A700C5DE14 /* PlayerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
 		EC58C2062C54462C00C5DE14 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		EC58C2072C54462C00C5DE14 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		EC58C20A2C54520800C5DE14 /* Space.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Space.sks; sourceTree = "<group>"; };
+		EC58C20C2C5460C700C5DE14 /* GroundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundNode.swift; sourceTree = "<group>"; };
+		EC58C20E2C5467DF00C5DE14 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		EC58C2102C54692C00C5DE14 /* Fireflies.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fireflies.sks; sourceTree = "<group>"; };
+		EC58C2122C54696D00C5DE14 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
+		EC58C2142C54698A00C5DE14 /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
+		EC58C2162C5469B400C5DE14 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
+		EC58C2182C546D0600C5DE14 /* ObstacleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleNode.swift; sourceTree = "<group>"; };
+		EC58C21A2C546DAE00C5DE14 /* EnemyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyNode.swift; sourceTree = "<group>"; };
+		EC58C21C2C546DEE00C5DE14 /* CollectibleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleNode.swift; sourceTree = "<group>"; };
 		ECB5DAFB2C53F0870065D322 /* SuperPlanet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperPlanet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB5DAFE2C53F0870065D322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECB5DB002C53F0870065D322 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,12 +143,22 @@
 				ECB5DB2E2C5414690065D322 /* GameViewController.swift */,
 				EC58C1C12C543F5500C5DE14 /* PhysicsCategory.swift */,
 				EC58C1BF2C543F0B00C5DE14 /* GameScene.swift */,
+				EC58C20E2C5467DF00C5DE14 /* MainMenu.swift */,
 				EC58C1C52C5443A700C5DE14 /* PlayerNode.swift */,
+				EC58C20C2C5460C700C5DE14 /* GroundNode.swift */,
+				EC58C2182C546D0600C5DE14 /* ObstacleNode.swift */,
+				EC58C21A2C546DAE00C5DE14 /* EnemyNode.swift */,
+				EC58C21C2C546DEE00C5DE14 /* CollectibleNode.swift */,
 				ECB5DB042C53F0870065D322 /* Main.storyboard */,
+				ECB5DB092C53F0880065D322 /* LaunchScreen.storyboard */,
 				EC58C2072C54462C00C5DE14 /* Actions.sks */,
 				EC58C2062C54462C00C5DE14 /* GameScene.sks */,
+				EC58C20A2C54520800C5DE14 /* Space.sks */,
+				EC58C2102C54692C00C5DE14 /* Fireflies.sks */,
+				EC58C2122C54696D00C5DE14 /* Fire.sks */,
+				EC58C2142C54698A00C5DE14 /* Rain.sks */,
+				EC58C2162C5469B400C5DE14 /* Magic.sks */,
 				ECB5DB072C53F0880065D322 /* Assets.xcassets */,
-				ECB5DB092C53F0880065D322 /* LaunchScreen.storyboard */,
 				ECB5DB0C2C53F0880065D322 /* Info.plist */,
 			);
 			path = SuperPlanet;
@@ -265,9 +295,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC58C2152C54698A00C5DE14 /* Rain.sks in Resources */,
 				EC58C2082C54462C00C5DE14 /* GameScene.sks in Resources */,
 				ECB5DB082C53F0880065D322 /* Assets.xcassets in Resources */,
+				EC58C2112C54692C00C5DE14 /* Fireflies.sks in Resources */,
+				EC58C20B2C54520800C5DE14 /* Space.sks in Resources */,
 				ECB5DB0B2C53F0880065D322 /* Base in Resources */,
+				EC58C2132C54696D00C5DE14 /* Fire.sks in Resources */,
+				EC58C2172C5469B400C5DE14 /* Magic.sks in Resources */,
 				ECB5DB062C53F0870065D322 /* Base in Resources */,
 				EC58C2092C54462C00C5DE14 /* Actions.sks in Resources */,
 			);
@@ -294,10 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC58C21D2C546DEE00C5DE14 /* CollectibleNode.swift in Sources */,
+				EC58C20D2C5460C700C5DE14 /* GroundNode.swift in Sources */,
+				EC58C20F2C5467DF00C5DE14 /* MainMenu.swift in Sources */,
 				EC58C1C62C5443A700C5DE14 /* PlayerNode.swift in Sources */,
+				EC58C21B2C546DAE00C5DE14 /* EnemyNode.swift in Sources */,
 				EC58C1C02C543F0B00C5DE14 /* GameScene.swift in Sources */,
 				ECB5DB2F2C5414690065D322 /* GameViewController.swift in Sources */,
 				ECB5DB032C53F0870065D322 /* MenuViewController.swift in Sources */,
+				EC58C2192C546D0600C5DE14 /* ObstacleNode.swift in Sources */,
 				EC58C1C22C543F5500C5DE14 /* PhysicsCategory.swift in Sources */,
 				ECB5DAFF2C53F0870065D322 /* AppDelegate.swift in Sources */,
 				ECB5DB012C53F0870065D322 /* SceneDelegate.swift in Sources */,

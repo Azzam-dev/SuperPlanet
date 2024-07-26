@@ -18,54 +18,17 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupGameLoop()
         setupGameScene()
         setupPauseView()
     }
     
-
-    @objc func gameLoop() {
-        let currentTime = CACurrentMediaTime()
-        let deltaTime = currentTime - lastUpdateTime
-        lastUpdateTime = currentTime
-        
-        // Update game state
-        update(deltaTime: deltaTime)
-        
-        // Render the game
-        render()
-    }
-    
-    fileprivate func update(deltaTime: CFTimeInterval) {
-        // Update your game state here using deltaTime
-    }
-    
-    fileprivate func render() {
-        // Render your game here
-    }
-    
-    fileprivate func setupGameLoop() {
-        // Set up the display link
-        displayLink = CADisplayLink(target: self, selector: #selector(gameLoop))
-        displayLink?.add(to: .main, forMode: .default)
-        
-        // Initialize the last update time
-        lastUpdateTime = CACurrentMediaTime()
-    }
-    
     fileprivate func setupGameScene() {
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
+        if let view = self.view as? SKView {
+            let scene = GameScene(size: view.bounds.size)
+            scene.scaleMode = .aspectFill
+            view.presentScene(scene)
             
             view.ignoresSiblingOrder = true
-            
             view.showsFPS = true
             view.showsNodeCount = true
         }
@@ -82,7 +45,16 @@ class GameViewController: UIViewController {
     
     
     @IBAction func didPlayCard(_ sender: UIButton) {
-        print("jumpAnimation")
+        if let view = self.view as? SKView,
+           let gameScene = view.scene as? GameScene {
+            switch sender.tag {
+            case 0:
+                gameScene.player.jump() // Call the jump method in GameScene
+            default:
+                gameScene.player.move(by: CGPoint(x: 50, y: 0)) // Call the jump method in GameScene
+            }
+            
+        }
     }
     
     
@@ -101,6 +73,9 @@ class GameViewController: UIViewController {
         }
     }
     
+    @IBAction func backToHomeButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
