@@ -91,7 +91,7 @@
         <scene sceneID="wOV-xu-as6">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="edQ-6N-MED" customClass="GameViewController" customModule="SuperPlanet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dl0-zF-wkI">
+                    <view key="view" contentMode="scaleToFill" id="Dl0-zF-wkI" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -456,7 +456,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1uk-gv-PxR"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VE9-Je-IJz" firstAttribute="centerX" secondItem="Dl0-zF-wkI" secondAttribute="centerX" id="4cz-LA-5sJ"/>
                             <constraint firstItem="lHr-48-8fR" firstAttribute="top" secondItem="1uk-gv-PxR" secondAttribute="top" constant="30" id="4pa-FT-Mtv"/>

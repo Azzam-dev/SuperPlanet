@@ -4,11 +4,10 @@
 //
 //  Created by الشيخ عزام on 20/01/1446 AH.
 //
-
 import SpriteKit
 
 class GameScene: SKScene {
-    var player: SKSpriteNode!
+    private var player: PlayerNode!
 
     override func didMove(to view: SKView) {
         setupPlayer()
@@ -16,23 +15,25 @@ class GameScene: SKScene {
     }
 
     func setupPlayer() {
-        player = SKSpriteNode(imageNamed: "player") // Replace with your player image
+        let playerTexture = SKTexture(imageNamed: "player") // Ensure the image is in your assets
+        player = PlayerNode(texture: playerTexture)
         player.position = CGPoint(x: frame.midX, y: frame.midY)
-        player.size = CGSize(width: 50, height: 50)
         addChild(player)
     }
 
     func setupPhysics() {
-        physicsWorld.gravity = CGVector(dx: 0, dy: -9.8) // Set gravity
-        player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
-        player.physicsBody?.categoryBitMask = PhysicsCategory.player
-        player.physicsBody?.contactTestBitMask = PhysicsCategory.ground
-        player.physicsBody?.collisionBitMask = PhysicsCategory.ground
+        physicsWorld.gravity = CGVector(dx: 0, dy: -9.8) // Gravity settings
     }
     
-    func jump() {
-        if player.physicsBody?.velocity.dy == 0 {
-            player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 200)) // Adjust impulse for jump strength
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        player.jump() // Call the jump method on the player node
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        // This method is called before each frame is rendered.
+        // Example: Update player's position or state if needed.
+        if player.position.y < frame.minY {
+            player.position.y = frame.midY // Reset player position if it goes off screen
         }
     }
 }
