@@ -7,30 +7,22 @@
 
 import UIKit
 import SnapKit
+import SpriteKit
 
 class GameViewController: UIViewController {
 
     @IBOutlet var pauseView: UIVisualEffectView!
     var displayLink: CADisplayLink?
     var lastUpdateTime: CFTimeInterval = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pauseView.alpha = 0
-        view.addSubview(pauseView)
-        pauseView.snp.makeConstraints { make in
-            make.center.size.equalToSuperview()
-        }
-        
-        
-        // Set up the display link
-        displayLink = CADisplayLink(target: self, selector: #selector(gameLoop))
-        displayLink?.add(to: .main, forMode: .default)
-        
-        // Initialize the last update time
-        lastUpdateTime = CACurrentMediaTime()
+        setupGameLoop()
+        setupGameScene()
+        setupPauseView()
     }
+    
 
     @objc func gameLoop() {
         let currentTime = CACurrentMediaTime()
@@ -44,13 +36,48 @@ class GameViewController: UIViewController {
         render()
     }
     
-    func update(deltaTime: CFTimeInterval) {
+    fileprivate func update(deltaTime: CFTimeInterval) {
         // Update your game state here using deltaTime
     }
     
-    func render() {
+    fileprivate func render() {
         // Render your game here
     }
+    
+    fileprivate func setupGameLoop() {
+        // Set up the display link
+        displayLink = CADisplayLink(target: self, selector: #selector(gameLoop))
+        displayLink?.add(to: .main, forMode: .default)
+        
+        // Initialize the last update time
+        lastUpdateTime = CACurrentMediaTime()
+    }
+    
+    fileprivate func setupGameScene() {
+        if let view = self.view as? SKView {
+            let scene = GameScene(size: view.bounds.size)
+            scene.scaleMode = .aspectFill
+            view.presentScene(scene)
+            
+            view.ignoresSiblingOrder = true
+            view.showsFPS = true
+            view.showsNodeCount = true
+        }
+    }
+    
+    fileprivate func setupPauseView() {
+        pauseView.alpha = 0
+        view.addSubview(pauseView)
+        pauseView.snp.makeConstraints { make in
+            make.center.size.equalToSuperview()
+        }
+    }
+    
+    
+    @IBAction func didPlayCard(_ sender: UIButton) {
+        print("jumpAnimation")
+    }
+    
     
     @IBAction func pauseAndStartButtons(_ sender: UIButton) {
         if pauseView.isHidden {
@@ -64,9 +91,7 @@ class GameViewController: UIViewController {
             } completion: { _ in
                 self.pauseView.isHidden = true
             }
-
         }
-        
     }
     
     
