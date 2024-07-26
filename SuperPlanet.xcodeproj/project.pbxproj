@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECB5DAFF2C53F0870065D322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DAFE2C53F0870065D322 /* AppDelegate.swift */; };
+		ECB5DB012C53F0870065D322 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB002C53F0870065D322 /* SceneDelegate.swift */; };
+		ECB5DB032C53F0870065D322 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB022C53F0870065D322 /* ViewController.swift */; };
+		ECB5DB062C53F0870065D322 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ECB5DB052C53F0870065D322 /* Base */; };
+		ECB5DB082C53F0880065D322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB5DB072C53F0880065D322 /* Assets.xcassets */; };
+		ECB5DB0B2C53F0880065D322 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ECB5DB0A2C53F0880065D322 /* Base */; };
+		ECB5DB162C53F0880065D322 /* SuperPlanetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB152C53F0880065D322 /* SuperPlanetTests.swift */; };
+		ECB5DB202C53F0880065D322 /* SuperPlanetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB1F2C53F0880065D322 /* SuperPlanetUITests.swift */; };
+		ECB5DB222C53F0880065D322 /* SuperPlanetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB212C53F0880065D322 /* SuperPlanetUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECB5DB122C53F0880065D322 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECB5DAF32C53F0870065D322 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECB5DAFA2C53F0870065D322;
+			remoteInfo = SuperPlanet;
+		};
+		ECB5DB1C2C53F0880065D322 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECB5DAF32C53F0870065D322 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECB5DAFA2C53F0870065D322;
+			remoteInfo = SuperPlanet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ECB5DAFB2C53F0870065D322 /* SuperPlanet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperPlanet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB5DAFE2C53F0870065D322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECB5DB002C53F0870065D322 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ECB5DB022C53F0870065D322 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECB5DB052C53F0870065D322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECB5DB072C53F0880065D322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECB5DB0A2C53F0880065D322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECB5DB0C2C53F0880065D322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECB5DB112C53F0880065D322 /* SuperPlanetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperPlanetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB5DB152C53F0880065D322 /* SuperPlanetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPlanetTests.swift; sourceTree = "<group>"; };
+		ECB5DB1B2C53F0880065D322 /* SuperPlanetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperPlanetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB5DB1F2C53F0880065D322 /* SuperPlanetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPlanetUITests.swift; sourceTree = "<group>"; };
+		ECB5DB212C53F0880065D322 /* SuperPlanetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPlanetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECB5DAF82C53F0870065D322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECB5DB0E2C53F0880065D322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECB5DB182C53F0880065D322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECB5DAF22C53F0870065D322 = {
+			isa = PBXGroup;
+			children = (
+				ECB5DAFD2C53F0870065D322 /* SuperPlanet */,
+				ECB5DB142C53F0880065D322 /* SuperPlanetTests */,
+				ECB5DB1E2C53F0880065D322 /* SuperPlanetUITests */,
+				ECB5DAFC2C53F0870065D322 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECB5DAFC2C53F0870065D322 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECB5DAFB2C53F0870065D322 /* SuperPlanet.app */,
+				ECB5DB112C53F0880065D322 /* SuperPlanetTests.xctest */,
+				ECB5DB1B2C53F0880065D322 /* SuperPlanetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECB5DAFD2C53F0870065D322 /* SuperPlanet */ = {
+			isa = PBXGroup;
+			children = (
+				ECB5DAFE2C53F0870065D322 /* AppDelegate.swift */,
+				ECB5DB002C53F0870065D322 /* SceneDelegate.swift */,
+				ECB5DB022C53F0870065D322 /* ViewController.swift */,
+				ECB5DB042C53F0870065D322 /* Main.storyboard */,
+				ECB5DB072C53F0880065D322 /* Assets.xcassets */,
+				ECB5DB092C53F0880065D322 /* LaunchScreen.storyboard */,
+				ECB5DB0C2C53F0880065D322 /* Info.plist */,
+			);
+			path = SuperPlanet;
+			sourceTree = "<group>";
+		};
+		ECB5DB142C53F0880065D322 /* SuperPlanetTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECB5DB152C53F0880065D322 /* SuperPlanetTests.swift */,
+			);
+			path = SuperPlanetTests;
+			sourceTree = "<group>";
+		};
+		ECB5DB1E2C53F0880065D322 /* SuperPlanetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECB5DB1F2C53F0880065D322 /* SuperPlanetUITests.swift */,
+				ECB5DB212C53F0880065D322 /* SuperPlanetUITestsLaunchTests.swift */,
+			);
+			path = SuperPlanetUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECB5DAFA2C53F0870065D322 /* SuperPlanet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECB5DB252C53F0880065D322 /* Build configuration list for PBXNativeTarget "SuperPlanet" */;
+			buildPhases = (
+				ECB5DAF72C53F0870065D322 /* Sources */,
+				ECB5DAF82C53F0870065D322 /* Frameworks */,
+				ECB5DAF92C53F0870065D322 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuperPlanet;
+			productName = SuperPlanet;
+			productReference = ECB5DAFB2C53F0870065D322 /* SuperPlanet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECB5DB102C53F0880065D322 /* SuperPlanetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECB5DB282C53F0880065D322 /* Build configuration list for PBXNativeTarget "SuperPlanetTests" */;
+			buildPhases = (
+				ECB5DB0D2C53F0880065D322 /* Sources */,
+				ECB5DB0E2C53F0880065D322 /* Frameworks */,
+				ECB5DB0F2C53F0880065D322 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECB5DB132C53F0880065D322 /* PBXTargetDependency */,
+			);
+			name = SuperPlanetTests;
+			productName = SuperPlanetTests;
+			productReference = ECB5DB112C53F0880065D322 /* SuperPlanetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECB5DB1A2C53F0880065D322 /* SuperPlanetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECB5DB2B2C53F0880065D322 /* Build configuration list for PBXNativeTarget "SuperPlanetUITests" */;
+			buildPhases = (
+				ECB5DB172C53F0880065D322 /* Sources */,
+				ECB5DB182C53F0880065D322 /* Frameworks */,
+				ECB5DB192C53F0880065D322 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECB5DB1D2C53F0880065D322 /* PBXTargetDependency */,
+			);
+			name = SuperPlanetUITests;
+			productName = SuperPlanetUITests;
+			productReference = ECB5DB1B2C53F0880065D322 /* SuperPlanetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECB5DAF32C53F0870065D322 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					ECB5DAFA2C53F0870065D322 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					ECB5DB102C53F0880065D322 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = ECB5DAFA2C53F0870065D322;
+					};
+					ECB5DB1A2C53F0880065D322 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = ECB5DAFA2C53F0870065D322;
+					};
+				};
+			};
+			buildConfigurationList = ECB5DAF62C53F0870065D322 /* Build configuration list for PBXProject "SuperPlanet" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECB5DAF22C53F0870065D322;
+			productRefGroup = ECB5DAFC2C53F0870065D322 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECB5DAFA2C53F0870065D322 /* SuperPlanet */,
+				ECB5DB102C53F0880065D322 /* SuperPlanetTests */,
+				ECB5DB1A2C53F0880065D322 /* SuperPlanetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECB5DAF92C53F0870065D322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB5DB082C53F0880065D322 /* Assets.xcassets in Resources */,
+				ECB5DB0B2C53F0880065D322 /* Base in Resources */,
+				ECB5DB062C53F0870065D322 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECB5DB0F2C53F0880065D322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECB5DB192C53F0880065D322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECB5DAF72C53F0870065D322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB5DB032C53F0870065D322 /* ViewController.swift in Sources */,
+				ECB5DAFF2C53F0870065D322 /* AppDelegate.swift in Sources */,
+				ECB5DB012C53F0870065D322 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECB5DB0D2C53F0880065D322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB5DB162C53F0880065D322 /* SuperPlanetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECB5DB172C53F0880065D322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB5DB222C53F0880065D322 /* SuperPlanetUITestsLaunchTests.swift in Sources */,
+				ECB5DB202C53F0880065D322 /* SuperPlanetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECB5DB132C53F0880065D322 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECB5DAFA2C53F0870065D322 /* SuperPlanet */;
+			targetProxy = ECB5DB122C53F0880065D322 /* PBXContainerItemProxy */;
+		};
+		ECB5DB1D2C53F0880065D322 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECB5DAFA2C53F0870065D322 /* SuperPlanet */;
+			targetProxy = ECB5DB1C2C53F0880065D322 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECB5DB042C53F0870065D322 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECB5DB052C53F0870065D322 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECB5DB092C53F0880065D322 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECB5DB0A2C53F0880065D322 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECB5DB232C53F0880065D322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECB5DB242C53F0880065D322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECB5DB262C53F0880065D322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SuperPlanet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plantera.SuperPlanet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECB5DB272C53F0880065D322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SuperPlanet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plantera.SuperPlanet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ECB5DB292C53F0880065D322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plantera.SuperPlanetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperPlanet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SuperPlanet";
+			};
+			name = Debug;
+		};
+		ECB5DB2A2C53F0880065D322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plantera.SuperPlanetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperPlanet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SuperPlanet";
+			};
+			name = Release;
+		};
+		ECB5DB2C2C53F0880065D322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plantera.SuperPlanetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SuperPlanet;
+			};
+			name = Debug;
+		};
+		ECB5DB2D2C53F0880065D322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plantera.SuperPlanetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SuperPlanet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECB5DAF62C53F0870065D322 /* Build configuration list for PBXProject "SuperPlanet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB5DB232C53F0880065D322 /* Debug */,
+				ECB5DB242C53F0880065D322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECB5DB252C53F0880065D322 /* Build configuration list for PBXNativeTarget "SuperPlanet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB5DB262C53F0880065D322 /* Debug */,
+				ECB5DB272C53F0880065D322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECB5DB282C53F0880065D322 /* Build configuration list for PBXNativeTarget "SuperPlanetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB5DB292C53F0880065D322 /* Debug */,
+				ECB5DB2A2C53F0880065D322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECB5DB2B2C53F0880065D322 /* Build configuration list for PBXNativeTarget "SuperPlanetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB5DB2C2C53F0880065D322 /* Debug */,
+				ECB5DB2D2C53F0880065D322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECB5DAF32C53F0870065D322 /* Project object */;
+}
