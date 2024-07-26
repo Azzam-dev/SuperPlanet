@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		ECB5DAFF2C53F0870065D322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DAFE2C53F0870065D322 /* AppDelegate.swift */; };
 		ECB5DB012C53F0870065D322 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB002C53F0870065D322 /* SceneDelegate.swift */; };
-		ECB5DB032C53F0870065D322 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB022C53F0870065D322 /* ViewController.swift */; };
+		ECB5DB032C53F0870065D322 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB022C53F0870065D322 /* MenuViewController.swift */; };
 		ECB5DB062C53F0870065D322 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ECB5DB052C53F0870065D322 /* Base */; };
 		ECB5DB082C53F0880065D322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB5DB072C53F0880065D322 /* Assets.xcassets */; };
 		ECB5DB0B2C53F0880065D322 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ECB5DB0A2C53F0880065D322 /* Base */; };
 		ECB5DB162C53F0880065D322 /* SuperPlanetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB152C53F0880065D322 /* SuperPlanetTests.swift */; };
 		ECB5DB202C53F0880065D322 /* SuperPlanetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB1F2C53F0880065D322 /* SuperPlanetUITests.swift */; };
 		ECB5DB222C53F0880065D322 /* SuperPlanetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB212C53F0880065D322 /* SuperPlanetUITestsLaunchTests.swift */; };
+		ECB5DB2F2C5414690065D322 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5DB2E2C5414690065D322 /* GameViewController.swift */; };
+		ECB5DB322C5415F80065D322 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = ECB5DB312C5415F80065D322 /* Lottie */; };
+		ECB5DB352C5416150065D322 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB5DB342C5416150065D322 /* ReSwift */; };
+		ECB5DB382C5416C60065D322 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ECB5DB372C5416C60065D322 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 		ECB5DAFB2C53F0870065D322 /* SuperPlanet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperPlanet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB5DAFE2C53F0870065D322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECB5DB002C53F0870065D322 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECB5DB022C53F0870065D322 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECB5DB022C53F0870065D322 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		ECB5DB052C53F0870065D322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECB5DB072C53F0880065D322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECB5DB0A2C53F0880065D322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 		ECB5DB1B2C53F0880065D322 /* SuperPlanetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperPlanetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB5DB1F2C53F0880065D322 /* SuperPlanetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPlanetUITests.swift; sourceTree = "<group>"; };
 		ECB5DB212C53F0880065D322 /* SuperPlanetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPlanetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECB5DB2E2C5414690065D322 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB5DB382C5416C60065D322 /* SnapKit in Frameworks */,
+				ECB5DB322C5415F80065D322 /* Lottie in Frameworks */,
+				ECB5DB352C5416150065D322 /* ReSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +109,8 @@
 			children = (
 				ECB5DAFE2C53F0870065D322 /* AppDelegate.swift */,
 				ECB5DB002C53F0870065D322 /* SceneDelegate.swift */,
-				ECB5DB022C53F0870065D322 /* ViewController.swift */,
+				ECB5DB022C53F0870065D322 /* MenuViewController.swift */,
+				ECB5DB2E2C5414690065D322 /* GameViewController.swift */,
 				ECB5DB042C53F0870065D322 /* Main.storyboard */,
 				ECB5DB072C53F0880065D322 /* Assets.xcassets */,
 				ECB5DB092C53F0880065D322 /* LaunchScreen.storyboard */,
@@ -143,6 +152,11 @@
 			dependencies = (
 			);
 			name = SuperPlanet;
+			packageProductDependencies = (
+				ECB5DB312C5415F80065D322 /* Lottie */,
+				ECB5DB342C5416150065D322 /* ReSwift */,
+				ECB5DB372C5416C60065D322 /* SnapKit */,
+			);
 			productName = SuperPlanet;
 			productReference = ECB5DAFB2C53F0870065D322 /* SuperPlanet.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,11 @@
 				Base,
 			);
 			mainGroup = ECB5DAF22C53F0870065D322;
+			packageReferences = (
+				ECB5DB302C5415F80065D322 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				ECB5DB332C5416150065D322 /* XCRemoteSwiftPackageReference "ReSwift" */,
+				ECB5DB362C5416C50065D322 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = ECB5DAFC2C53F0870065D322 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECB5DB032C53F0870065D322 /* ViewController.swift in Sources */,
+				ECB5DB2F2C5414690065D322 /* GameViewController.swift in Sources */,
+				ECB5DB032C53F0870065D322 /* MenuViewController.swift in Sources */,
 				ECB5DAFF2C53F0870065D322 /* AppDelegate.swift in Sources */,
 				ECB5DB012C53F0870065D322 /* SceneDelegate.swift in Sources */,
 			);
@@ -449,8 +469,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,8 +498,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,6 +625,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECB5DB302C5415F80065D322 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+		ECB5DB332C5416150065D322 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReSwift/ReSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.1;
+			};
+		};
+		ECB5DB362C5416C50065D322 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECB5DB312C5415F80065D322 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB5DB302C5415F80065D322 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		ECB5DB342C5416150065D322 /* ReSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB5DB332C5416150065D322 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
+		};
+		ECB5DB372C5416C60065D322 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB5DB362C5416C50065D322 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECB5DAF32C53F0870065D322 /* Project object */;
 }
