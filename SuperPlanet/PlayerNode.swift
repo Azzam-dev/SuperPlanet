@@ -40,9 +40,7 @@ class PlayerNode: SKNode {
 
     // Custom method to move the player
     func move(by offset: CGPoint) {
-        position.x += offset.x
-        position.y += offset.y
-        playerSprite.position.x -= offset.x
-        playerSprite.position.y -= offset.y
+        playerSprite.position.x += offset.x
+        playerSprite.position.y += offset.y
     }
 }

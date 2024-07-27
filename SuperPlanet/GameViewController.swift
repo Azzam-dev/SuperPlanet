@@ -50,8 +50,10 @@ class GameViewController: UIViewController {
             switch sender.tag {
             case 0:
                 gameScene.player.jump() // Call the jump method in GameScene
+            case 1:
+                gameScene.player.move(by: CGPoint(x: 50, y: 0))
             default:
-                gameScene.player.move(by: CGPoint(x: 50, y: 0)) // Call the jump method in GameScene
+                gameScene.player.move(by: CGPoint(x: -50, y: 0))
             }
             
         }
