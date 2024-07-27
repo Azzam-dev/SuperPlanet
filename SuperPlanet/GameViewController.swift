@@ -52,19 +52,18 @@ class GameViewController: UIViewController, GameSceneDelegate {
     fileprivate func setupPlayerActionCards() {
         playerActionCards = Array([
             PlayerAction(card: .attack),
-            PlayerAction(card: .jump),
-            PlayerAction(card: .forward),
+            
             PlayerAction(card: .back),
             
-            PlayerAction(card: .attack),
-            PlayerAction(card: .jump),
             PlayerAction(card: .forward),
-            PlayerAction(card: .back),
+            PlayerAction(card: .forward),
+            PlayerAction(card: .forward),
             
-            PlayerAction(card: .attack),
             PlayerAction(card: .jump),
-            PlayerAction(card: .forward),
-            PlayerAction(card: .back),
+            PlayerAction(card: .jump),
+            PlayerAction(card: .jump),
+            PlayerAction(card: .jump),
+            
         ].shuffled().prefix(5))
         
         actionCardsButtons.enumerated().forEach { index, cardButton in

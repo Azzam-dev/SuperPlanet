@@ -82,9 +82,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let groundMaxY = frame.minY + ground.groundSprite.size.height + basicSizeUnit / 2
         let imageName1 = "BG-Purple"
         let imageName2 = "BG-Blue"
-        collectibleNode = CollectibleNode(position: CGPoint(x: frameMaxX + basicSizeUnit * 3, y: groundMaxY))
         let sectionObstacles = [
-            collectibleNode,
+            CollectibleNode(position: CGPoint(x: frameMaxX + basicSizeUnit * 3, y: groundMaxY)),
             ObstacleNode(imageNamed: imageName1, size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 4, y: groundMaxY)),
             ObstacleNode(imageNamed: imageName2, size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 6, y: groundMaxY)),
             ObstacleNode(imageNamed: imageName1,size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 8, y: groundMaxY + basicSizeUnit )),
@@ -93,6 +92,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let sectionObstacles2 = [
             ObstacleNode(imageNamed: imageName1,size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 14, y: groundMaxY)),
+            CollectibleNode(position: CGPoint(x: frameMaxX + basicSizeUnit * 14, y: groundMaxY + basicSizeUnit)),
             ObstacleNode(imageNamed: imageName2,size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 18, y: groundMaxY + basicSizeUnit )),
             
         ].shuffled()
@@ -100,6 +100,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let sectionObstacles3 = [
             ObstacleNode(imageNamed: imageName2,size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 26, y: groundMaxY)),
             ObstacleNode(imageNamed: imageName1,size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 28, y: groundMaxY + basicSizeUnit * 2 )),
+            CollectibleNode(position: CGPoint(x: frameMaxX + basicSizeUnit * 28, y: groundMaxY + basicSizeUnit * 3 )),
             
         ].shuffled()
         
