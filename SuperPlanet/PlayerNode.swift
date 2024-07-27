@@ -8,7 +8,7 @@
 import SpriteKit
 
 class PlayerNode: SKNode {
-    private let playerSprite: SKSpriteNode
+    let playerSprite: SKSpriteNode
     private var originalPlayerPosition: CGPoint?
 
     init(imageNamed: String) {

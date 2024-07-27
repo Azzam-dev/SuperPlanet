@@ -13,7 +13,7 @@ class GameScene: SKScene {
     
     var player: PlayerNode!
     private var ground: GroundNode!
-    var sectionObstacles = [ObstacleNode]()
+    var worldMap = [[ObstacleNode]]()
     
     private var tileMapNode: SKTileMapNode!
     
@@ -24,8 +24,7 @@ class GameScene: SKScene {
         setupPhysics()
         setupPlayer()
         setupGround()
-        setupSectionObstacles()
-        setupTileMap()
+        setupWorldMap()
     }
     
     func setupSpaceParticales() {
@@ -56,32 +55,70 @@ class GameScene: SKScene {
         addChild(ground)
     }
     
-    func setupSectionObstacles() {
+    func setupWorldMap() {
         // Create the ground node using the custom GroundNode class
         let blockSize = CGSize(width: 50, height: 50)
         let basicSizeUnit = blockSize.height
         let frameMaxX = frame.maxX
         let groundMaxY = frame.minY + ground.groundSprite.size.height + basicSizeUnit / 2
-        sectionObstacles = [
+        let sectionObstacles = [
             ObstacleNode(size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 4, y: groundMaxY)),
             ObstacleNode(size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 6, y: groundMaxY)),
             ObstacleNode(size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 8, y: groundMaxY + basicSizeUnit )),
             
         ]
-        sectionObstacles.forEach { obstacle in
-            addChild(obstacle)
+        
+        let sectionObstacles2 = [
+            ObstacleNode(size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 14, y: groundMaxY)),
+            ObstacleNode(size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 18, y: groundMaxY + basicSizeUnit )),
+            
+        ].shuffled()
+        
+        let sectionObstacles3 = [
+            ObstacleNode(size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 26, y: groundMaxY)),
+            ObstacleNode(size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 28, y: groundMaxY + basicSizeUnit * 2 )),
+            
+        ].shuffled()
+        
+        
+        
+        
+        worldMap = [sectionObstacles, sectionObstacles2, sectionObstacles3].shuffled()
+        worldMap.enumerated().forEach { index, section in
+            section.forEach { obstacle in
+//                obstacle.position.x += CGFloat(Int(basicSizeUnit) * index + 1)
+                addChild(obstacle)
+            }
         }
     }
     
-    func setupTileMap() {
-        // Initialize and add the TileMap node
-        let tileSize = CGSize(width: 64, height: 64) // Use your tile dimensions here
-        let mapSize = CGSize(width: 20, height: 15) // Adjust based on your map size
-        let tileMap = TileMap(tileSetName: "GroundTileSet", tileSize: tileSize, mapSize: mapSize, tileTextureName: "BG-Green")
-        tileMap.position = CGPoint(x: frame.midX - (tileMap.frame.size.width / 2), y: frame.midY - (tileMap.frame.size.height / 2))
-        addChild(tileMap)
+    
+    fileprivate func worldMapMovement() {
+        worldMap.forEach { section in
+            section.forEach { obstacle in
+                obstacle.position.x -= 1
+                
+                // Optional: Boundary check
+                if obstacle.position.x < frame.minX { //TODO:
+                    obstacle.position.x = frame.maxX // Wrap around
+                }
+            }
+        }
     }
     
+    func resetPlayerPosition() {
+            player.playerSprite.position = CGPoint(x: frame.midX, y: frame.midY)
+            
+            // Remove the existing physics body
+            player.playerSprite.physicsBody = nil
+            
+            // Create a new physics body
+            player.playerSprite.physicsBody = SKPhysicsBody(rectangleOf: player.playerSprite.size)
+            player.playerSprite.physicsBody?.categoryBitMask = PhysicsCategory.player
+            player.playerSprite.physicsBody?.contactTestBitMask = PhysicsCategory.ground | PhysicsCategory.obstacle | PhysicsCategory.enemy
+            player.playerSprite.physicsBody?.collisionBitMask = PhysicsCategory.ground | PhysicsCategory.obstacle | PhysicsCategory.enemy
+            player.playerSprite.physicsBody?.affectedByGravity = true
+        }
     
     override func update(_ currentTime: TimeInterval) {
         // Calculate the time interval since the last update
@@ -90,18 +127,16 @@ class GameScene: SKScene {
         
         // This method is called before each frame is rendered.
         // Example: Update player's position or state if needed.
-        if player.position.y < frame.minY { //TODO:
-            player.position = CGPoint(x: frame.minX + 120, y: frame.midY) // Reset player position if it goes off screen
+        print("player postion: \(player.position), frame minX \(frame.minX), frame maxX \(frame.maxX), frame minY \(frame.minY), frame maxY \(frame.maxY)")
+        // Check if the player is outside the screen bounds with a margin
+        let margin: CGFloat = 100 // Adjust margin as needed
+        if player.playerSprite.position.x + margin < frame.minX  || player.playerSprite.position.x + margin > frame.maxX  {
+            // Reset player position if it goes off screen
+            resetPlayerPosition()
+            print("Player position reset to center and physics body reset")
         }
         
-        sectionObstacles.forEach { obstacle in
-            obstacle.position.x -= 1
-            
-            // Optional: Boundary check
-            if obstacle.position.x < frame.minX { //TODO:
-                obstacle.position.x = frame.maxX // Wrap around
-            }
-        }
+        worldMapMovement()
         
         
     }
