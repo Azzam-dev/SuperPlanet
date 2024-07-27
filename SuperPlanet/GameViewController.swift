@@ -51,9 +51,9 @@ class GameViewController: UIViewController {
             case 0:
                 gameScene.player.jump() // Call the jump method in GameScene
             case 1:
-                gameScene.player.move(by: CGPoint(x: 50, y: 0))
+                gameScene.player.move(by: CGPoint(x: 30, y: 0))
             default:
-                gameScene.player.move(by: CGPoint(x: -50, y: 0))
+                gameScene.player.move(by: CGPoint(x: -30, y: 0))
             }
             
         }

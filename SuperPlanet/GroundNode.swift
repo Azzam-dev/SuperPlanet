@@ -11,7 +11,7 @@ class GroundNode: SKNode {
     let groundSprite: SKSpriteNode
 
     init(size: CGSize) {
-        groundSprite = SKSpriteNode(color: .brown, size: size)
+        groundSprite = SKSpriteNode(color: .systemGreen, size: size)
         super.init()
 
         // Position the sprite within the node
