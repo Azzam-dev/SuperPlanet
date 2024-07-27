@@ -9,8 +9,9 @@ import UIKit
 import SnapKit
 import SpriteKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GameSceneDelegate {
     
+    @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet var pauseView: UIVisualEffectView!
     var displayLink: CADisplayLink?
     var lastUpdateTime: CFTimeInterval = 0
@@ -30,9 +31,9 @@ class GameViewController: UIViewController {
     fileprivate func setupGameScene() {
         if let view = self.view as? SKView {
             let scene = GameScene(size: view.bounds.size)
+            scene.gameSceneDelegate = self // Set the delegate
             scene.scaleMode = .aspectFill
             view.presentScene(scene)
-            
             view.ignoresSiblingOrder = true
             view.showsFPS = true
             view.showsNodeCount = true
@@ -70,6 +71,10 @@ class GameViewController: UIViewController {
             let image = UIImage(systemName: playerActionCards[index].card.rawValue)
             cardButton.setImage(image, for: .normal)
         }
+    }
+    
+    func didUpdatePoints(_ points: Int) {
+        pointsLabel.text = String(points)
     }
     
     @IBAction func didPlayCard(_ sender: UIButton) {

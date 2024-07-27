@@ -7,19 +7,25 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+protocol GameSceneDelegate: AnyObject {
+    func didUpdatePoints(_ points: Int)
+}
+
+class GameScene: SKScene, SKPhysicsContactDelegate {
+    
+    weak var gameSceneDelegate: GameSceneDelegate?
+    var points = 0
     
     var lastUpdateTime: TimeInterval = 0
-    
     var player: PlayerNode!
     private var ground: GroundNode!
-    var worldMap = [[ObstacleNode]]()
+    var worldMap = [[SKSpriteNode]]()
     
     private var tileMapNode: SKTileMapNode!
     
     override func didMove(to view: SKView) {
         lastUpdateTime = CACurrentMediaTime()
-        
+        physicsWorld.contactDelegate = self
         setupSpaceParticales()
         setupPhysics()
         setupPlayer()
@@ -41,7 +47,6 @@ class GameScene: SKScene {
     }
     
     func setupPlayer() {
-        //        player.name = "player" TODO:
         player = PlayerNode(imageNamed: "player") // Ensure the image is in your assets
         player.position = CGPoint(x: frame.minX + 120, y: frame.midY)
         player.zPosition = 1
@@ -50,7 +55,6 @@ class GameScene: SKScene {
     
     func setupGround() {
         // Create the ground node using the custom GroundNode class
-        
         ground = GroundNode(size: CGSize(width: frame.width, height: 140))
         ground.position = CGPoint(x: frame.midX, y: frame.minY)
         addChild(ground)
@@ -69,6 +73,7 @@ class GameScene: SKScene {
         
     }
     
+    var collectibleNode = CollectibleNode(position: .zero)
     func setupWorldMap() {
         // Create the ground node using the custom GroundNode class
         let blockSize = CGSize(width: 50, height: 50)
@@ -77,7 +82,9 @@ class GameScene: SKScene {
         let groundMaxY = frame.minY + ground.groundSprite.size.height + basicSizeUnit / 2
         let imageName1 = "BG-Purple"
         let imageName2 = "BG-Blue"
+        collectibleNode = CollectibleNode(position: CGPoint(x: frameMaxX + basicSizeUnit * 3, y: groundMaxY))
         let sectionObstacles = [
+            collectibleNode,
             ObstacleNode(imageNamed: imageName1, size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 4, y: groundMaxY)),
             ObstacleNode(imageNamed: imageName2, size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 6, y: groundMaxY)),
             ObstacleNode(imageNamed: imageName1,size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 8, y: groundMaxY + basicSizeUnit )),
@@ -100,9 +107,8 @@ class GameScene: SKScene {
         
         
         worldMap = [sectionObstacles, sectionObstacles2, sectionObstacles3].shuffled()
-        worldMap.enumerated().forEach { index, section in
+        worldMap.forEach { section in
             section.forEach { obstacle in
-                //                obstacle.position.x += CGFloat(Int(basicSizeUnit) * index + 1)
                 addChild(obstacle)
             }
         }
@@ -142,14 +148,38 @@ class GameScene: SKScene {
             player.playerSprite.physicsBody?.collisionBitMask = PhysicsCategory.ground | PhysicsCategory.obstacle | PhysicsCategory.enemy
             player.playerSprite.physicsBody?.affectedByGravity = true
             print("Player position reset to center and physics body reset")
+            
+            points = 0
+            gameSceneDelegate?.didUpdatePoints(points)
         }
     }
+    
+    
+    func collectibleCollected(_ collectible: CollectibleNode) {
+        collectible.removeFromParent()
+        points += 1
+        gameSceneDelegate?.didUpdatePoints(points)
+        print("Collectible collected! Points: \(points)")
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        let contactMask = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+        if contactMask == PhysicsCategory.player | PhysicsCategory.collectible {
+            if let collectible = contact.bodyA.node as? CollectibleNode {
+                collectibleCollected(collectible)
+            } else if let collectible = contact.bodyB.node as? CollectibleNode {
+                collectibleCollected(collectible)
+            }
+        }
+    }
+    
     
     override func update(_ currentTime: TimeInterval) {
         // Calculate the time interval since the last update
         let deltaTime = CGFloat(currentTime - lastUpdateTime)
         lastUpdateTime = currentTime
-        
+        print("collectibleNode position:", collectibleNode.position)
         
         resetPlayerPosition()
         worldMapMovement()

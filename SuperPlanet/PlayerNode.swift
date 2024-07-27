@@ -21,7 +21,7 @@ class PlayerNode: SKNode {
         playerSprite.position = CGPoint.zero // Position relative to SKNode
         playerSprite.physicsBody = SKPhysicsBody(rectangleOf: playerSprite.size)
         playerSprite.physicsBody?.categoryBitMask = PhysicsCategory.player
-        playerSprite.physicsBody?.contactTestBitMask = PhysicsCategory.ground | PhysicsCategory.obstacle | PhysicsCategory.enemy
+        playerSprite.physicsBody?.contactTestBitMask = PhysicsCategory.collectible
         playerSprite.physicsBody?.collisionBitMask = PhysicsCategory.ground | PhysicsCategory.obstacle | PhysicsCategory.enemy
         playerSprite.physicsBody?.affectedByGravity = true
         // Add the sprite node to the custom node

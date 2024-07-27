@@ -9,10 +9,10 @@ import SpriteKit
 
 class CollectibleNode: SKSpriteNode {
     
-    init(size: CGSize) {
+    init(position: CGPoint) {
         let texture = SKTexture(imageNamed: "collectible") // Ensure you have this image in your assets
-        super.init(texture: texture, color: .clear, size: size)
-        
+        super.init(texture: texture, color: .clear, size: CGSize(width: 50, height: 50))
+        self.position = position
         setupPhysics()
     }
     
@@ -21,7 +21,8 @@ class CollectibleNode: SKSpriteNode {
     }
     
     private func setupPhysics() {
-        self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width / 2)
+        self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
+        self.physicsBody?.isDynamic = false
         self.physicsBody?.categoryBitMask = PhysicsCategory.collectible
         self.physicsBody?.contactTestBitMask = PhysicsCategory.player
         self.physicsBody?.collisionBitMask = PhysicsCategory.none

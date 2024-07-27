@@ -468,19 +468,20 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHr-48-8fR">
-                                <rect key="frame" x="30.000000000000004" y="30.000000000000004" width="59.333333333333343" height="40.333333333333343"/>
+                                <rect key="frame" x="30" y="30" width="66.333333333333329" height="50"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9f6-vx-NI6">
-                                        <rect key="frame" x="10" y="9.9999999999999982" width="39.333333333333336" height="20.333333333333329"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9f6-vx-NI6">
+                                        <rect key="frame" x="10.000000000000004" y="10" width="46.333333333333343" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkC-ij-qNi">
-                                                <rect key="frame" x="0.0" y="0.0" width="23" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collectible" translatesAutoresizingMaskIntoConstraints="NO" id="JGa-kq-SSp">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="JGa-kq-SSp" secondAttribute="height" multiplier="1:1" id="2OR-2X-2O4"/>
+                                                    <constraint firstAttribute="width" constant="30" id="c58-zH-GtP"/>
+                                                </constraints>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xto-R8-4N5">
-                                                <rect key="frame" x="27.999999999999996" y="0.0" width="11.333333333333332" height="20.333333333333332"/>
+                                                <rect key="frame" x="35" y="0.0" width="11.333333333333336" height="30"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -541,6 +542,7 @@
                     <navigationItem key="navigationItem" id="OPd-fk-0p6"/>
                     <connections>
                         <outlet property="pauseView" destination="Rgc-pw-ekr" id="AXB-AD-grQ"/>
+                        <outlet property="pointsLabel" destination="xto-R8-4N5" id="fLl-HZ-d8A"/>
                         <outletCollection property="actionCardsButtons" destination="NcC-BX-bQI" collectionClass="NSMutableArray" id="vvK-Ln-5Bz"/>
                         <outletCollection property="actionCardsButtons" destination="M8G-SQ-ctx" collectionClass="NSMutableArray" id="MH0-aw-rJh"/>
                         <outletCollection property="actionCardsButtons" destination="rC7-5U-Lzh" collectionClass="NSMutableArray" id="r6B-7K-Hks"/>
@@ -643,6 +645,7 @@
         <image name="arrowshape.left.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.up.fill" catalog="system" width="123" height="128"/>
+        <image name="collectible" width="64" height="64"/>
         <image name="hands.sparkles.fill" catalog="system" width="119" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="pause.circle.fill" catalog="system" width="128" height="123"/>
