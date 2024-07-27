@@ -13,6 +13,7 @@
 		EC2197BC2C54C4FF0029A9C1 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2197B62C54C4FF0029A9C1 /* UIFont+Extensions.swift */; };
 		EC2197BD2C54C4FF0029A9C1 /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2197B72C54C4FF0029A9C1 /* UIScrollView+Extensions.swift */; };
 		EC2197BE2C54C4FF0029A9C1 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2197B82C54C4FF0029A9C1 /* UIView+Extensions.swift */; };
+		EC2197C02C553F1F0029A9C1 /* space.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC2197BF2C553F1F0029A9C1 /* space.mp3 */; };
 		EC58C1C02C543F0B00C5DE14 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58C1BF2C543F0B00C5DE14 /* GameScene.swift */; };
 		EC58C1C22C543F5500C5DE14 /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58C1C12C543F5500C5DE14 /* PhysicsCategory.swift */; };
 		EC58C1C62C5443A700C5DE14 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58C1C52C5443A700C5DE14 /* PlayerNode.swift */; };
@@ -69,6 +70,7 @@
 		EC2197B62C54C4FF0029A9C1 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		EC2197B72C54C4FF0029A9C1 /* UIScrollView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extensions.swift"; sourceTree = "<group>"; };
 		EC2197B82C54C4FF0029A9C1 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		EC2197BF2C553F1F0029A9C1 /* space.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = space.mp3; sourceTree = "<group>"; };
 		EC58C1BF2C543F0B00C5DE14 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		EC58C1C12C543F5500C5DE14 /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 		EC58C1C52C5443A700C5DE14 /* PlayerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				EC58C2142C54698A00C5DE14 /* Rain.sks */,
 				EC58C2162C5469B400C5DE14 /* Magic.sks */,
 				ECB5DB072C53F0880065D322 /* Assets.xcassets */,
+				EC2197BF2C553F1F0029A9C1 /* space.mp3 */,
 				ECB5DB0C2C53F0880065D322 /* Info.plist */,
 				EC2197B92C54C4FF0029A9C1 /* Extensions */,
 			);
@@ -335,6 +338,7 @@
 				EC58C20B2C54520800C5DE14 /* Space.sks in Resources */,
 				ECB5DB0B2C53F0880065D322 /* Base in Resources */,
 				EC58C2132C54696D00C5DE14 /* Fire.sks in Resources */,
+				EC2197C02C553F1F0029A9C1 /* space.mp3 in Resources */,
 				EC58C2172C5469B400C5DE14 /* Magic.sks in Resources */,
 				ECB5DB062C53F0870065D322 /* Base in Resources */,
 				EC58C2092C54462C00C5DE14 /* Actions.sks in Resources */,

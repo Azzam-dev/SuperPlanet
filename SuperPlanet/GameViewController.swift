@@ -131,6 +131,13 @@ class GameViewController: UIViewController, GameSceneDelegate {
         }
     }
     
+    @IBAction func audioLevelSlider(_ sender: UISlider) {
+        if let view = self.view as? SKView,
+           let gameScene = view.scene as? GameScene {
+            gameScene.adjustAudioLevel(volume: sender.value)
+        }
+    }
+    
     @IBAction func backToHomeButton(_ sender: UIButton) {
         dismiss(animated: true)
     }

@@ -6,6 +6,7 @@
 //
 
 import SpriteKit
+import AVFoundation
 
 protocol GameSceneDelegate: AnyObject {
     func didUpdatePoints(_ points: Int)
@@ -21,7 +22,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var ground: GroundNode!
     var worldMap = [[SKSpriteNode]]()
     
-    private var tileMapNode: SKTileMapNode!
+    // Background Audio node
+    var backgroundAudio: SKAudioNode!
     
     override func didMove(to view: SKView) {
         lastUpdateTime = CACurrentMediaTime()
@@ -31,6 +33,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupPlayer()
         setupGround()
         setupWorldMap()
+        setupBackgroundAudio()
     }
     
     func setupSpaceParticales() {
@@ -40,6 +43,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             particales.zPosition = -1
             addChild(particales)
         }
+    }
+    
+    func setupBackgroundAudio() {
+        if let audioURL = Bundle.main.url(forResource: "space", withExtension: "mp3") {
+            backgroundAudio = SKAudioNode(url: audioURL)
+            backgroundAudio.autoplayLooped = true
+            addChild(backgroundAudio)
+        } else {
+            print("Background music file not found.")
+        }
+    }
+    
+    func adjustAudioLevel(volume: Float) {
+        backgroundAudio.run(SKAction.changeVolume(to: volume, duration: 0))
     }
     
     func setupPhysics() {
