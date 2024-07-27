@@ -35,7 +35,7 @@ class PlayerNode: SKNode {
     // Custom method to handle jumping
     func jump() {
         //if playerSprite.physicsBody?.velocity.dy == 0 {
-        playerSprite.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50)) // Adjust impulse as needed
+        playerSprite.physicsBody?.applyImpulse(CGVector(dx: 20, dy: 60)) // Adjust impulse as needed
         //}
     }
     

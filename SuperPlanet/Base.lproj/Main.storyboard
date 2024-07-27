@@ -112,10 +112,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ua3-mX-G6Q">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="110"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcC-BX-bQI">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcC-BX-bQI">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="110"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.right.fill" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.up.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="didPlayCard:" destination="edQ-6N-MED" eventType="touchUpInside" id="3ee-Hg-d2F"/>
                                                 </connections>
@@ -145,13 +145,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIG-qI-2GR">
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIG-qI-2GR">
                                         <rect key="frame" x="90" y="0.0" width="80" height="110"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8G-SQ-ctx">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8G-SQ-ctx">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="110"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.up.fill" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.right.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="didPlayCard:" destination="edQ-6N-MED" eventType="touchUpInside" id="NIA-Ob-Lri"/>
                                                 </connections>
@@ -181,10 +181,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Kx-aX-P1d">
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Kx-aX-P1d">
                                         <rect key="frame" x="180" y="0.0" width="80" height="110"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC7-5U-Lzh">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC7-5U-Lzh">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="110"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="hands.sparkles.fill" catalog="system"/>
@@ -217,10 +217,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTc-lm-gYS">
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTc-lm-gYS">
                                         <rect key="frame" x="270" y="0.0" width="80" height="110"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W40-Bq-ehy">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W40-Bq-ehy">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="110"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="arrowshape.left.fill" catalog="system"/>
@@ -253,10 +253,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Acc-XG-ofq">
+                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Acc-XG-ofq">
                                         <rect key="frame" x="360" y="0.0" width="80" height="110"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQu-We-Jdd">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQu-We-Jdd">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="110"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="arrowshape.up.fill" catalog="system"/>
@@ -541,6 +541,11 @@
                     <navigationItem key="navigationItem" id="OPd-fk-0p6"/>
                     <connections>
                         <outlet property="pauseView" destination="Rgc-pw-ekr" id="AXB-AD-grQ"/>
+                        <outletCollection property="actionCards" destination="ua3-mX-G6Q" collectionClass="NSMutableArray" id="ret-uV-gOh"/>
+                        <outletCollection property="actionCards" destination="EIG-qI-2GR" collectionClass="NSMutableArray" id="uLB-cv-j79"/>
+                        <outletCollection property="actionCards" destination="8Kx-aX-P1d" collectionClass="NSMutableArray" id="lTj-vv-JEO"/>
+                        <outletCollection property="actionCards" destination="GTc-lm-gYS" collectionClass="NSMutableArray" id="AMK-Ri-DZ7"/>
+                        <outletCollection property="actionCards" destination="Acc-XG-ofq" collectionClass="NSMutableArray" id="lQ6-ja-b2x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfG-HD-uQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

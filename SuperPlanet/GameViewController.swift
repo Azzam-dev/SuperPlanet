@@ -15,6 +15,8 @@ class GameViewController: UIViewController {
     var displayLink: CADisplayLink?
     var lastUpdateTime: CFTimeInterval = 0
     
+    @IBOutlet var actionCards: [UIView]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,15 +51,39 @@ class GameViewController: UIViewController {
            let gameScene = view.scene as? GameScene {
             switch sender.tag {
             case 0:
-                gameScene.player.jump() // Call the jump method in GameScene
+                gameScene.player.jump()
             case 1:
                 gameScene.player.move(by: CGPoint(x: 30, y: 0))
-            default:
+            case 2:
+                print("☄️☄️☄️✨✨✨")
+            case 3:
                 gameScene.player.move(by: CGPoint(x: -30, y: 0))
+            default:
+                gameScene.player.jump()
             }
             
         }
+        
+        rotateView360Degrees(view: actionCards[sender.tag])
+
     }
+    
+    func rotateView360Degrees(view: UIView, duration: CFTimeInterval = 1.0) {
+            UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear], animations: {
+                view.alpha = 0
+                view.transform = view.transform.rotated(by: .pi)
+                    .scaledBy(x: 0.5, y: 0.5)
+            }, completion: { _ in
+                UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear], animations: {
+                    view.alpha = 1
+                    view.transform = view.transform.rotated(by: .pi)
+                        .scaledBy(x: 2, y: 2)
+                }, completion: { _ in
+                    // If you want to keep rotating the view indefinitely, uncomment the following line:
+                    // self.rotateView360Degrees(view: view)
+                })
+            })
+        }
     
     
     @IBAction func pauseAndStartButtons(_ sender: UIButton) {
