@@ -541,11 +541,16 @@
                     <navigationItem key="navigationItem" id="OPd-fk-0p6"/>
                     <connections>
                         <outlet property="pauseView" destination="Rgc-pw-ekr" id="AXB-AD-grQ"/>
-                        <outletCollection property="actionCards" destination="ua3-mX-G6Q" collectionClass="NSMutableArray" id="ret-uV-gOh"/>
-                        <outletCollection property="actionCards" destination="EIG-qI-2GR" collectionClass="NSMutableArray" id="uLB-cv-j79"/>
-                        <outletCollection property="actionCards" destination="8Kx-aX-P1d" collectionClass="NSMutableArray" id="lTj-vv-JEO"/>
-                        <outletCollection property="actionCards" destination="GTc-lm-gYS" collectionClass="NSMutableArray" id="AMK-Ri-DZ7"/>
-                        <outletCollection property="actionCards" destination="Acc-XG-ofq" collectionClass="NSMutableArray" id="lQ6-ja-b2x"/>
+                        <outletCollection property="actionCardsButtons" destination="NcC-BX-bQI" collectionClass="NSMutableArray" id="vvK-Ln-5Bz"/>
+                        <outletCollection property="actionCardsButtons" destination="M8G-SQ-ctx" collectionClass="NSMutableArray" id="MH0-aw-rJh"/>
+                        <outletCollection property="actionCardsButtons" destination="rC7-5U-Lzh" collectionClass="NSMutableArray" id="r6B-7K-Hks"/>
+                        <outletCollection property="actionCardsButtons" destination="W40-Bq-ehy" collectionClass="NSMutableArray" id="RVS-2E-x5u"/>
+                        <outletCollection property="actionCardsButtons" destination="NQu-We-Jdd" collectionClass="NSMutableArray" id="8oD-aw-wla"/>
+                        <outletCollection property="actionCardsViews" destination="ua3-mX-G6Q" collectionClass="NSMutableArray" id="xlx-0t-M89"/>
+                        <outletCollection property="actionCardsViews" destination="EIG-qI-2GR" collectionClass="NSMutableArray" id="Vws-Fw-HpJ"/>
+                        <outletCollection property="actionCardsViews" destination="8Kx-aX-P1d" collectionClass="NSMutableArray" id="p8d-9g-dyM"/>
+                        <outletCollection property="actionCardsViews" destination="GTc-lm-gYS" collectionClass="NSMutableArray" id="u3Q-VQ-kfE"/>
+                        <outletCollection property="actionCardsViews" destination="Acc-XG-ofq" collectionClass="NSMutableArray" id="zcT-NF-pqs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfG-HD-uQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

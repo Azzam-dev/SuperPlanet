@@ -9,8 +9,8 @@ import SpriteKit
 
 class ObstacleNode: SKSpriteNode {
     
-    init(size: CGSize, position: CGPoint) {
-        let texture = SKTexture(imageNamed: "BG-Green") // Ensure you have this image in your assets
+    init(imageNamed: String, size: CGSize, position: CGPoint) {
+        let texture = SKTexture(imageNamed: imageNamed) // Ensure you have this image in your assets
         super.init(texture: texture, color: .clear, size: size)
         self.position = position
         setupPhysics()

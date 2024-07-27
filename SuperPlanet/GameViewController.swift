@@ -10,18 +10,21 @@ import SnapKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-
+    
     @IBOutlet var pauseView: UIVisualEffectView!
     var displayLink: CADisplayLink?
     var lastUpdateTime: CFTimeInterval = 0
+    var playerActionCards = [PlayerAction]()
     
-    @IBOutlet var actionCards: [UIView]!
+    @IBOutlet var actionCardsViews: [UIView]!
+    @IBOutlet var actionCardsButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupGameScene()
         setupPauseView()
+        setupPlayerActionCards()
     }
     
     fileprivate func setupGameScene() {
@@ -45,45 +48,68 @@ class GameViewController: UIViewController {
         }
     }
     
+    fileprivate func setupPlayerActionCards() {
+        playerActionCards = Array([
+            PlayerAction(card: .attack),
+            PlayerAction(card: .jump),
+            PlayerAction(card: .forward),
+            PlayerAction(card: .back),
+            
+            PlayerAction(card: .attack),
+            PlayerAction(card: .jump),
+            PlayerAction(card: .forward),
+            PlayerAction(card: .back),
+            
+            PlayerAction(card: .attack),
+            PlayerAction(card: .jump),
+            PlayerAction(card: .forward),
+            PlayerAction(card: .back),
+        ].shuffled().prefix(5))
+        
+        actionCardsButtons.enumerated().forEach { index, cardButton in
+            let image = UIImage(systemName: playerActionCards[index].card.rawValue)
+            cardButton.setImage(image, for: .normal)
+        }
+    }
     
     @IBAction func didPlayCard(_ sender: UIButton) {
         if let view = self.view as? SKView,
            let gameScene = view.scene as? GameScene {
-            switch sender.tag {
-            case 0:
-                gameScene.player.jump()
-            case 1:
-                gameScene.player.move(by: CGPoint(x: 30, y: 0))
-            case 2:
+            switch playerActionCards[sender.tag].card {
+            case .attack:
                 print("☄️☄️☄️✨✨✨")
-            case 3:
-                gameScene.player.move(by: CGPoint(x: -30, y: 0))
-            default:
+            case .jump:
                 gameScene.player.jump()
+            case .forward:
+                gameScene.player.move(by: CGPoint(x: 30, y: 0))
+            case .back:
+                gameScene.player.move(by: CGPoint(x: -30, y: 0))
             }
-            
         }
         
-        rotateView360Degrees(view: actionCards[sender.tag])
-
+        playerActionCards[sender.tag] = [PlayerAction(card: .attack),PlayerAction(card: .jump),PlayerAction(card: .forward),PlayerAction(card: .back)].shuffled().first!
+        let newCardIcon = UIImage(systemName: playerActionCards[sender.tag].card.rawValue)!
+        cardAnimationAndUpdatingIcon(view: actionCardsViews[sender.tag], button: sender, icon: newCardIcon )
+        
     }
     
-    func rotateView360Degrees(view: UIView, duration: CFTimeInterval = 1.0) {
+    func cardAnimationAndUpdatingIcon(view: UIView, button: UIButton, icon: UIImage, duration: CFTimeInterval = 0.5) {
+        UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear], animations: {
+            view.alpha = 0
+            view.transform = view.transform.rotated(by: .pi)
+                .scaledBy(x: 0.5, y: 0.5)
+        }, completion: { _ in
             UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear], animations: {
-                view.alpha = 0
+                button.setImage(icon, for: .normal)
+                view.alpha = 1
                 view.transform = view.transform.rotated(by: .pi)
-                    .scaledBy(x: 0.5, y: 0.5)
+                    .scaledBy(x: 2, y: 2)
             }, completion: { _ in
-                UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear], animations: {
-                    view.alpha = 1
-                    view.transform = view.transform.rotated(by: .pi)
-                        .scaledBy(x: 2, y: 2)
-                }, completion: { _ in
-                    // If you want to keep rotating the view indefinitely, uncomment the following line:
-                    // self.rotateView360Degrees(view: view)
-                })
+                // If you want to keep rotating the view indefinitely, uncomment the following line:
+                // self.rotateView360Degrees(view: view)
             })
-        }
+        })
+    }
     
     
     @IBAction func pauseAndStartButtons(_ sender: UIButton) {
