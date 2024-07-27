@@ -9,13 +9,17 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    var lastUpdateTime: TimeInterval = 0
+    
     var player: PlayerNode!
     private var ground: GroundNode!
-    private var Obstacle1: ObstacleNode!
+    var sectionObstacles = [ObstacleNode]()
     
     private var tileMapNode: SKTileMapNode!
     
     override func didMove(to view: SKView) {
+        lastUpdateTime = CACurrentMediaTime()
+        
         setupSpaceParticales()
         setupPhysics()
         setupPlayer()
@@ -58,15 +62,13 @@ class GameScene: SKScene {
         let basicSizeUnit = blockSize.height
         let frameMaxX = frame.maxX
         let groundMaxY = frame.minY + ground.groundSprite.size.height + basicSizeUnit / 2
-        let obstacleSlideAction = SKAction.move(to: CGPoint(x: -basicSizeUnit, y: groundMaxY), duration: 2.0)
-        let sectionObstacles = [
+        sectionObstacles = [
             ObstacleNode(size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 4, y: groundMaxY)),
             ObstacleNode(size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 6, y: groundMaxY)),
             ObstacleNode(size: blockSize, position: CGPoint(x: frameMaxX + basicSizeUnit * 8, y: groundMaxY + basicSizeUnit )),
             
         ]
         sectionObstacles.forEach { obstacle in
-            obstacle.run(obstacleSlideAction)
             addChild(obstacle)
         }
     }
@@ -82,10 +84,25 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
+        // Calculate the time interval since the last update
+        let deltaTime = CGFloat(currentTime - lastUpdateTime)
+        lastUpdateTime = currentTime
+        
         // This method is called before each frame is rendered.
         // Example: Update player's position or state if needed.
-        if player.position.y < frame.minY {
-            player.position.y = frame.midY // Reset player position if it goes off screen
+        if player.position.y < frame.minY { //TODO:
+            player.position = CGPoint(x: frame.minX + 120, y: frame.midY) // Reset player position if it goes off screen
         }
+        
+        sectionObstacles.forEach { obstacle in
+            obstacle.position.x -= 1
+            
+            // Optional: Boundary check
+            if obstacle.position.x < frame.minX { //TODO:
+                obstacle.position.x = frame.maxX // Wrap around
+            }
+        }
+        
+        
     }
 }

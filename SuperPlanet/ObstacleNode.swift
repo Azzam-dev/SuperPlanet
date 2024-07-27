@@ -27,4 +27,5 @@ class ObstacleNode: SKSpriteNode {
         self.physicsBody?.contactTestBitMask = PhysicsCategory.player
         self.physicsBody?.collisionBitMask = PhysicsCategory.player
     }
+    
 }
